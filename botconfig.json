@@ -1,0 +1,7 @@
+{
+    "token": "ODI2MTI0MDQwNjc3NzUyODUz.YGH59w.esUjeffHKWAiYo1DV5Meo-DcfxE",
+    "perfix": "^",
+    "status": "test",
+    "money": "0",
+     "mongoPath": "mongodb+srv://GOORBEH:arya7966a@cluster0.ubpd1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+}

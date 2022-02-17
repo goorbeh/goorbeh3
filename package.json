@@ -1,0 +1,37 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+},
+"engines": {
+ "node": "x"
+},
+  "author": "Williams",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^13.5.0",
+    "express": "^4.17.2",
+    "humanize-duration": "^3.27.1",
+    "mongoose": "^6.1.4",
+    "ms": "^2.1.3",
+    "opusscript": "0.0.7",
+    "quick.db": "^7.1.3",
+    "ytdl-core": "^2.1.4"
+  },
+ 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piano-Bot-music/gggg.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/piano-Bot-music/gggg/issues"
+  },
+  "homepage": "https://github.com/piano-Bot-music/gggg#readme",
+  "description": ""
+}
