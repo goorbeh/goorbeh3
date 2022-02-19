@@ -37,7 +37,11 @@ client.on("ready", () => {
 
 
     function YousamPower() {
-      let hungry = [`${client.guilds.cache.size} Servers | ^help ` , `${client.users.cache.size} Members | ^invite`]
+      let hungry = [`${client.guilds.cache.size} Servers | ^help ` , `let count = 0;
+    client.guilds.cache.forEach((guild) => {
+        count += guild.memberCount
+    })
+ Members | ^invite`]
       let Power = Math.floor(Math.random() * hungry.length);
       client.user.setActivity(hungry[Power], {type: "PLAYING"});
     }; setInterval(YousamPower, 10000)
