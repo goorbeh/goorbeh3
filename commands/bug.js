@@ -24,6 +24,6 @@ module.exports = {
         .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
         .setTimestamp()
         message.channel.send("پیام شما به سیستم ارسال شد با تشکر");
- channel.send(reportEmbed)
+ channel.send({embeds: [reportEmbed]})
     }
 }
