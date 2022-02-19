@@ -8,7 +8,7 @@ module.exports = {
 
     run: async(client, message, args) => {
         const user = message.mentions.users.first();
-        if (!message.member.Permissions.has('KICK_MEMBERS')) return message.channel.send('!پرمیشن کیک داری که کامند میزنی؟')
+        if (!message.member.permissions.has('KICK_MEMBERS')) return message.channel.send('!پرمیشن کیک داری که کامند میزنی؟')
         if (user) {
           const member = message.guild.member(user);
           
