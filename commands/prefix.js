@@ -8,7 +8,7 @@ module.exports = {
     category: "admin",
 
     run: async(client, message, args) => {
-     if(!message.member.Permissions.has('ADMINISTRATOR')) return message.channel.send('شما پریمیشن کافی ندارید')
+     if(!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send('شما پریمیشن کافی ندارید')
      const newprefix = args[0]
      if(!newprefix) return message.channel.send('لطفا پریفیکس جدید را بعد کامند بنویسید')
      if(newprefix.length > 3) return message.channel.send('شما نمیتوانید بیشتر از سه کاراکتر بنویسید')
