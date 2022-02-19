@@ -64,8 +64,8 @@ client.on("message", async message => {
 
   let prefixEmbed = new Discord.MessageEmbed()
   .setTitle("کاری داری باهام؟")
-  .addField("پریفیکس من در این سرور", `/${prefix}/`)
-  .addField("اینوایت دادن من", `/${prefix}invite/`)
+  .addField("پریفیکس من در این سرور", ``${prefix}``)
+  .addField("اینوایت دادن من", ``${prefix}invite``)
   .setFooter("GOORBEH bot")
   .setColor("BLACK")
 
