@@ -10,9 +10,9 @@ const mongodb = require('./mongo')()
 const PrefixSchema = require('./schema/PrefixSchema');
 const { trusted } = require('mongoose');
 let count = 0;
-    client.guilds.cache.forEach((guild) => {
-        count += guild.memberCount
-    })
+client.guilds.cache.forEach((guild) => {
+count += guild.memberCount
+})
 
 
 client.on('guildCreate', guild => {
