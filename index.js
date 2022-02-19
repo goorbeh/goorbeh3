@@ -21,7 +21,7 @@ client.on('guildCreate', guild => {
 
 client.on('guildCreate', guild => {
   const logChannel = client.channels.cache.get("943784949532745748")
-  let logEmbed = new Discord.MessageEMbed()
+  let logEmbed = new Discord.MessageEmbed()
   .setTitle("جوین یهسرور شدم")
   .addField("اسم سرور", `${guild.name}`, true)
   .addField("اونر سرور", `${guild.owner}`, true)
