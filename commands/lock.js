@@ -7,7 +7,7 @@ module.exports = {
     category: "general",
 
     run: async(client, message, args) => {
-        if (!message.member.Permissions.has('MANAGE_CHANNELS')) {
+        if (!message.member.permissions.has('MANAGE_CHANNELS')) {
             return message.channel.send("Shoma Permission Nadarid 💩")
             }
             message.channel.permissionOverwrites.edit(message.guild.everyone.id, {
