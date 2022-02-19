@@ -10,7 +10,6 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
         .setTitle("کامند های بات")
         .addField("invite", "/منو اینوایت بده جون دل/")
-        .addField("")
         .addField("botinfo", "/اطلاعات باته جون دل/")
           .addField("idea", "/ایده داری بگو بینم چیه/")
           .addField("bug", "/باگ داره بات ای بابا بگو بینم/")
