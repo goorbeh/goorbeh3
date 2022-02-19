@@ -7,7 +7,7 @@ module.exports = {
     category: "general",
     
     run: async(client, message, args) => {
-        if(!message.member.Permissions.has('MANAGE_MESSAGES')) return message.channel.send('پرمیشن نداری :/')
+        if(!message.member.permissions.has('MANAGE_MESSAGES')) return message.channel.send('پرمیشن نداری :/')
         if(!args[0]) return message.channel.send('خو بعد کامند بنویس چقدرو میخوای پاک کنی')
         if(isNaN(args[0])) return message.channel.send('دا عدد باید بدی فقط')
         if(parseInt(args[0])> 99) return message.channel.send('بیشتر از 99 تا نمیتونی پاک کنی')
