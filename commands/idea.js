@@ -21,7 +21,7 @@ module.exports = {
       .addField('Invite',`${invite}`)
       .setThumbnail(message.author.displayAvatarURL({dynamic: true}))
       .setTimestamp()
-      message.lineReplyNoMention("ایده شما ثبت شد با تشکر");
+      message.channel.send("ایده شما ثبت شد با تشکر");
       chidea.send({embeds: [embed]})
     }
 }
