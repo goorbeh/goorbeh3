@@ -10,8 +10,6 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
     .setTitle("کامند های ادمینستوری")
     .setColor("BLUE")
-    .addField("بن کردن", "ban", true)
-    .addField("کیک کردن", "kick", true)
     .addField("پاک کردن پیام ها", "clear", true)
     .addField("قفل کردن چنل", "lock", true)
     .addField("باز کردن چنل", "unlock", true)
