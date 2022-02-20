@@ -27,9 +27,8 @@ client.on('guildCreate', guild => {
 client.on('guildCreate', guild => {
   const logChannel = client.channels.cache.get("943784949532745748")
   let logEmbed = new Discord.MessageEmbed()
-  .setTitle("جوین یهسرور شدم")
+  .setTitle("جوین یه سرور شدم")
   .addField("اسم سرور", `${guild.name}`, true)
-  .addField("اونر سرور", `${guild.owner}`, true)
   .addField("تعداد ممبر ها", `${guild.memberCount}`, true)
   .addField("ایدی سرور", `${guild.id}`, true)
   .setImage(guild.iconURL())
@@ -42,7 +41,7 @@ client.on("ready", () => {
 
 
     function YousamPower() {
-      let hungry = [`${client.guilds.cache.size} Servers | ^help ` , ` ${count} Members | ^invite`]
+      let hungry = [`${client.guilds.cache.size} Servers | ^help` , `${count} Members | ^invite`]
       let Power = Math.floor(Math.random() * hungry.length);
       client.user.setActivity(hungry[Power], {type: "PLAYING"});
     }; setInterval(YousamPower, 10000)
