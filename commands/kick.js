@@ -12,9 +12,9 @@ module.exports = {
         if (user) {
           const member = message.guild.member(user);
           
-          if (member) {
+          if (user) {
             
-            member
+            user
               .kick('Optional reason that will display in the audit logs')
               .then(() => {
                 message.channe.send(`**از سرور کیک شد${user.tag}**`);
