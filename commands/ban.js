@@ -11,8 +11,8 @@ module.exports = {
         if (!message.member.permissions.has('BAN_MEMBERS')) return message.channel.send('!پرمیشن بن داری که کامند میزنی؟')
         if (user) {
           const member = message.guild.member(user);
-          if (member) {
-            member
+          if (user) {
+            user
               .ban({
                 reason: 'They were bad!',
               })
