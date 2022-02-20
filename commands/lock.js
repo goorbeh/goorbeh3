@@ -10,9 +10,7 @@ module.exports = {
         if (!message.member.permissions.has('MANAGE_CHANNELS')) {
             return message.channel.send("Shoma Permission Nadarid 💩")
             }
-            message.channel.permissionOverwrites.edit(message.guild.everyone.id, {
-                SEND_MESSAGES: false
-            });
+            message.channel.updateOverwrite(message.channel.guild.roles.everyone, { SEND_MESSAGES: false });
             
             const embed = new Discord.MessageEmbed()
             .setTitle("Channel Update Shod")
