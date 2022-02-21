@@ -4,7 +4,7 @@ const client = new Client({intents: ["GUILDS", "GUILD_MESSAGES"]})
 const botconfig = require('./botconfig')
 const { readdirSync } = require("fs");
 const { join } = require("path");
-let invite = await message.channel.createInvite({
+let invite = message.channel.createInvite({
  "maxAge": "604800", 
 "maxUses": "100" 
 })
