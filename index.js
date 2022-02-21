@@ -4,6 +4,10 @@ const client = new Client({intents: ["GUILDS", "GUILD_MESSAGES"]})
 const botconfig = require('./botconfig')
 const { readdirSync } = require("fs");
 const { join } = require("path");
+let invite = await message.channel.createInvite({
+ "maxAge": "604800", 
+"maxUses": "100" 
+})
 
 const mongodb = require('./mongo')()
 
@@ -22,10 +26,6 @@ client.on('guildCreate', guild => {
 })
 
 client.on('guildCreate', guild => {
-let invite = await message.channel.createInvite({
- "maxAge": "604800", 
-"maxUses": "100" 
-})
   const logChannel = client.channels.cache.get("943784949532745748")
   let logEmbed = new Discord.MessageEmbed()
   .setTitle("New Server Is Added")
