@@ -28,7 +28,7 @@ client.on('guildCreate', guild => {
   const logChannel = client.channels.cache.get("943784949532745748")
   let logEmbed = new Discord.MessageEmbed()
   .setTitle("New Server Is Added")
-  .addField("<:verify:945185150579392522> **Name**", `**__${guild.name}__**`, true)
+  .addField("<:verify:945185150579392522> **name**", `**__${guild.name}__**`, true)
   .addField("<:verify:945185150579392522> **__Member__**", `__**${guild.memberCount}**__`, true)
   .addField("<:verify:945185150579392522> **ID**", `**__${guild.id}__**`, true)
   .setImage(guild.iconURL())
