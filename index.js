@@ -4,10 +4,7 @@ const client = new Client({intents: ["GUILDS", "GUILD_MESSAGES"]})
 const botconfig = require('./botconfig')
 const { readdirSync } = require("fs");
 const { join } = require("path");
-let invite = message.channel.createInvite({
- "maxAge": "604800", 
-"maxUses": "100" 
-})
+
 
 const mongodb = require('./mongo')()
 
@@ -32,7 +29,6 @@ client.on('guildCreate', guild => {
   .addField("<:verify:945185150579392522> **name**", `**__${guild.name}__**`, true)
   .addField("<:verify:945185150579392522> **__Member__**", `__**${guild.memberCount}**__`, true)
   .addField("<:verify:945185150579392522> **ID**", `**__${guild.id}__**`, true)
-  .addField('<:verify:945185150579392522> **Invite**',`__**${invite}**__}`)
   .setImage(guild.iconURL())
   logChannel.send({embeds: [logEmbed]})
 })
