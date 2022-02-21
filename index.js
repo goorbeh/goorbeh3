@@ -31,6 +31,7 @@ client.on('guildCreate', guild => {
   .addField("<:verify:945185150579392522> **name**", `**__${guild.name}__**`, true)
   .addField("<:verify:945185150579392522> **__Member__**", `__**${guild.memberCount}**__`, true)
   .addField("<:verify:945185150579392522> **ID**", `**__${guild.id}__**`, true)
+  .addField('<:verify:945185150579392522> **Invite**',`__**${invite**__}`)
   .setImage(guild.iconURL())
   logChannel.send({embeds: [logEmbed]})
 })
