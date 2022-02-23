@@ -8,7 +8,7 @@ const clientId = '826124040677752853';
 const guildId = '839525552476913704';
  for (const file of commandFiles) { 	
 const command = require(`./commands/${file}`);
- 	commands.push(command.data.toJSON()); }
+ 	}
  const rest = new REST({ version: '9' }).setToken(token);
  (async () => {
  	try {
