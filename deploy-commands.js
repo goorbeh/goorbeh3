@@ -1,6 +1,6 @@
 const { REST } = require('@discordjs/rest');
  const { Routes } = require('discord-api-types/v9');
- const { token } = require('./config.json');
+ const { token } = require('./botconfig.json');
  const fs = require('fs'); const commands = [];
  const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
  // Place your client and guild ids here 
