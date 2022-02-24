@@ -9,7 +9,7 @@ const guildId = '839525552476913704';
  for (const file of commandFiles) { 	
 const command = require(`./commands/${file}`);
  	}
- const rest = new REST({ version: '9' }).setToken(token);
+ const rest = new REST({ version: '9' }).setToken(process.env.token);
  (async () => {
  	try {
  		console.log('Started refreshing application (/) commands.');
