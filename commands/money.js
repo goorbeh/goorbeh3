@@ -20,13 +20,13 @@ module.exports = {
 
 
         let bank;
- let data = await MoneySchema.findOne({
+ let data2 = await MoneySchema.findOne({
  _id: message.guild.id 
 })
  if(data === null) {
  bank = "0" 
 } else {
- prefix = data.bank } 
+ prefix = data2.bank } 
 
 
         let embed = new Discord.MessageEmbed()
