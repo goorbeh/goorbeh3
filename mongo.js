@@ -1,8 +1,7 @@
 const mongo = require('mongoose')
-const { mongoPath } = require('./botconfig.json')
 
 module.exports = async () => {
-    await mongo.connect(mongoPath)
+    await mongo.connect(process.env.mongo)
 
     return mongo
 } 
