@@ -20,6 +20,6 @@ module.exports = {
             money: "300",
         }
        });
-       return message.channel.send({embed: embed})
+       return message.channel.send({embeds: [embed]})
     },
 };
