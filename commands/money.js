@@ -9,18 +9,30 @@ module.exports = {
 
     run: async(client, message, args) => {
 
-        let money = await MoneySchema.findOne({
-            usetID: message.author.id,
-        })
+        let money;
+ let data = await MoneySchema.findOne({
+ _id: message.guild.id 
+})
+ if(data === null) {
+ money = "0" 
+} else {
+ prefix = data.money } 
 
-        let bank = await MoneySchema.findOne({
-            userID: message.author.id,
-        })
+
+        let bank;
+ let data = await MoneySchema.findOne({
+ _id: message.guild.id 
+})
+ if(data === null) {
+ bank = "0" 
+} else {
+ prefix = data.bank } 
+
 
         let embed = new Discord.MessageEmbed()
         .addField("پول های کیف پولتان", `${money}`)
         .addField("پول های بانک شما", `${bank}`)
-        .setTitle("پروقایل شما")
+        .setTitle("پروفایل شما")
         .setColor("RANDOM")
 
         message.channel.send({
