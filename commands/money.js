@@ -11,7 +11,7 @@ module.exports = {
 
         let money;
  let data = await MoneySchema.findOne({
- _id: message.guild.id 
+ userID: message.guild.id 
 })
  if(data === null) {
  money = "0" 
@@ -21,7 +21,7 @@ module.exports = {
 
         let bank;
  let data2 = await MoneySchema.findOne({
- _id: message.guild.id 
+ userID: message.guild.id 
 })
  if(data === null) {
  bank = "0" 
