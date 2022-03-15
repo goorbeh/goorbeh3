@@ -14,7 +14,7 @@ module.exports = {
         .setColor("RANDOM")
 
        const user = await MoneySchema.find({ userID: message.author.id })
-const mon = parseInt(user.money) + 300;
+const mon = parseInt(user.money) + "300";
 MoneySchema.findOneAndUpdate({ userID: message.author.id }, { money: mon }, (err) => {
                 if(err) {
                     console.log(err)
