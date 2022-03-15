@@ -13,7 +13,9 @@ module.exports = {
         .setDescription("شما 300 تا پول گرفتید")
         .setColor("RANDOM")
 
-       const user = await MoneySchema.find({ message.author.id });
+       const user = await MoneySchema.find({
+           userID: message.author.id,
+})
 const money = parseInt(user[0].money) + 300
 MoneySchema.findOneAndUpdate({ userID: message.author.id }, { money: money });
       message.channel.send({embeds: [embed]})
