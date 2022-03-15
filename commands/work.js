@@ -13,13 +13,10 @@ module.exports = {
         .setDescription("شما 300 تا پول گرفتید")
         .setColor("RANDOM")
 
-       const response = await MoneySchema.findOneAndUpdate({
-           userID: message.author.id,
-       }, {
-        $inc: {
-            money: "300",
-        }
-       });
+       const user = await MoneySchema.find({ message.author.id })
+const money = parseInt(user[0].money) + "300"
+MoneySchema.findOneAndUpdate({ userID: message.author.id }, { money: money })
+
        return message.channel.send({embeds: [embed]})
     },
 };
