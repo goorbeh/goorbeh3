@@ -35,6 +35,17 @@ client.on('guildCreate', guild => {
 client.commands = new Discord.Collection();
 
 client.on("ready", () => {
+
+const guild = client.guilds.cache.get("83952555247691370")
+
+  let commands
+
+  if(guild) {
+    commands = guild.commands
+  } else {
+    commands = client.application.commands
+  };
+
 let count = 0;
 client.guilds.cache.forEach((guild) => {
 count += guild.memberCount
@@ -54,6 +65,29 @@ for (const file of commandFiles) {
   const command = require(join(__dirname, "commands", `${file}`));
   client.commands.set(command.name, command);
 }
+
+
+client.on("interactionCreate", async interaction => {
+    if (interaction.commandName === "ping") {
+        //const word = interaction.options.getString("word");
+        //const washy = interaction.options.getNumber("washy");
+
+        interaction.reply({
+            content: `**__${client.ws.ping}__** Ms`,
+            ephemeral: true
+        })
+      
+    }
+    if (interaction.commandName === "say") {
+             const word = interaction.options.getString("word");
+
+        let embedSay = new Discord.MessageEmbed()
+      .setDescription(`**__${word}__**`)
+        .setColor("RANDOM")
+        
+        interaction.reply({embeds: [embedSay]})
+    }
+})
 
 client.on("message", async message => {
 
