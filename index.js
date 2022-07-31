@@ -233,7 +233,7 @@ const button = interaction.customId
              const word = interaction.options.getString("word");
 
         let embedSay = new Discord.MessageEmbed()
-      .setDescriptvion(`**__${word}__**`)
+      .setDescription(`**__${word}__**`)
         .setColor("RANDOM")
         
         interaction.reply({embeds: [embedSay]})
