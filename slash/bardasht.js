@@ -21,6 +21,14 @@ module.exports = {
 
     callback: async({interaction}) => {
 
+const user = await Schema.findOne({
+            userID: interaction.user.id,
+        })
+
+        if(!user) {
+            return interaction.reply({content: "<:emoji_85:998533562481508472> شما هنوز ثبت نام نکردید", ephemeral: true})
+        }
+
       const cooldown = cooldowns.get(interaction.user.id);
 if (cooldown) {
           const remaining = humanizeDuration(cooldown - Date.now());
@@ -37,13 +45,7 @@ cooldowns.set(interaction.user.id, Date.now() + 60000);
                     setTimeout(() => cooldowns.delete(interaction.user.id), 60000);
 
 
-        const user = await Schema.findOne({
-            userID: interaction.user.id,
-        })
-
-        if(!user) {
-            return interaction.reply({content: "<:emoji_85:998533562481508472> شما هنوز ثبت نام نکردید", ephemeral: true})
-        }
+        
 
       
         let amount = interaction.options.getNumber("money")
