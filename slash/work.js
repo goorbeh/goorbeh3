@@ -13,6 +13,14 @@ module.exports = {
   guildOnly: true,
     callback: async({interaction}) => {
 
+const user = await Schema.findOne({
+           userID: interaction.user.id,
+       })
+
+       if(!user) {
+           return interaction.reply({content: "<:emoji_85:998533562481508472> شما هنوز ثبت نام نکردید", ephemeral: true})
+       }
+
       const cooldown = cooldowns.get(interaction.user.id);
 if (cooldown) {
           const remaining = humanizeDuration(cooldown - Date.now());
@@ -31,13 +39,7 @@ cooldowns.set(interaction.user.id, Date.now() + 3600000);
        const number  = Math.floor(Math.random() * 1000) +1;
 
 
-       const user = await Schema.findOne({
-           userID: interaction.user.id,
-       })
-
-       if(!user) {
-           return interaction.reply({content: "<:emoji_85:998533562481508472> شما هنوز ثبت نام نکردید", ephemeral: true})
-       }
+       
 
         const respons = await Schema.findOneAndUpdate({
             userID: interaction.user.id,
