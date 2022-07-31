@@ -217,27 +217,6 @@ const button = interaction.customId
             return;
           })
             }
-
-                            
-    if (interaction.commandName === "ping") {
-        //const word = interaction.options.getString("word");
-        //const washy = interaction.options.getNumber("washy");
-
-        interaction.reply({
-            content: `**__${client.ws.ping}__** Ms`,
-            ephemeral: true
-        })
-      
-    }
-    if (interaction.commandName === "say") {
-             const word = interaction.options.getString("word");
-
-        let embedSay = new Discord.MessageEmbed()
-      .setDescription(`**__${word}__**`)
-        .setColor("RANDOM")
-        
-        interaction.reply({embeds: [embedSay]})
-    }
 })
 
 
