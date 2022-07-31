@@ -4,6 +4,15 @@ module.exports = {
 description: "say coomand",
 guildOnly: true,
   slash: true,
+  
+  options: [
+    {
+    name: "word",
+      description: "say the word",
+      required: true,
+      type: Discord.Constants.ApplicationCommandOptionTypes.STRING,
+    }
+  ]
 callback: ({interaction}) => {
              const word = interaction.options.getString("word");
 
