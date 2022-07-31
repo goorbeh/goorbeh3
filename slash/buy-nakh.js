@@ -38,7 +38,7 @@ module.exports = {
         })
 
         if(money.money < 200000) {
-            interaction.reply({interaction: "شما پول کافی ندارید", ephemeral: true})
+            interaction.reply({content: "شما پول کافی ندارید", ephemeral: true})
             return;
         }
 
