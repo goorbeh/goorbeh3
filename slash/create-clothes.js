@@ -14,6 +14,15 @@ module.exports = {
   guildOnly: true,
     callback: async({interaction, user}) => {
 
+const data3 = await MoneySchema.findOne({
+            userID: user.id,
+        })
+    
+        if(!data3){
+            interaction.reply({content: "شما هنوز ثبت نام نکردید با زدن /sabtnam ثبت نام کنید", ephemeral: true})
+            return;
+        }
+
       const cooldown = cooldowns.get(interaction.user.id);
 if (cooldown) {
           const remaining = humanizeDuration(cooldown - Date.now());
@@ -32,14 +41,7 @@ cooldowns.set(interaction.user.id, Date.now() + 3600000);
             User: user.id,
         })
 
-        const data3 = await MoneySchema.findOne({
-            userID: user.id,
-        })
-    
-        if(!data3){
-            interaction.reply({content: "شما هنوز ثبت نام نکردید با زدن /sabtnam ثبت نام کنید", ephemeral: true})
-            return;
-        }
+        
 
         if(!factory) {
             interaction.reply({content: "شما کارخانه ندارید با زدن کامند /buy-factory کارخانه بخرید", ephemeral: true})
