@@ -1,1 +1,1 @@
-Worker: npm i wokcommands
+Worker: node index.js
