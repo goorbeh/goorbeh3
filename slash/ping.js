@@ -4,7 +4,7 @@ module.exports = {
 description: "ping coomand",
   guildOnly: true,
   slash: true,
-  callback: ({interaction}) => {
+  callback: ({interaction, client}) => {
   
         //const word = interaction.options.getString("word");
         //const washy = interaction.options.getNumber("washy");
