@@ -72,7 +72,7 @@ cooldowns.set(interaction.user.id, Date.now() + 3600000);
             User: user.id,
         }, {
             $inc: {
-                money: 300000,
+                money: 500000,
             }
         })
 
