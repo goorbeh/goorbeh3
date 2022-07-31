@@ -12,7 +12,7 @@ guildOnly: true,
       required: true,
       type: Discord.Constants.ApplicationCommandOptionTypes.STRING,
     }
-  ]
+  ],
 callback: ({interaction}) => {
              const word = interaction.options.getString("word");
 
