@@ -3,6 +3,7 @@ const Discord = require("discord.js")
 module.exports = {
 description: "say coomand",
 guildOnly: true,
+  slash: true
 callback: ({interaction}) => {
              const word = interaction.options.getString("word");
 
