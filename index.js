@@ -79,6 +79,19 @@ count += guild.memberCount
 })
   console.log(`logged as ${client.user.tag}`)
 
+const StatusEmbed = new MessageEmbed()
+.setTitle("GOORBEH status")
+.setColor("BLUE")
+.addField("Ping", `${client.ws.ping}`)
+.addField("servers", `${client.guilds.cache.size}`)
+.addField("members", `${count}`)
+.setFooter("updated every 2Mins | GOORBEH bot")
+ client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send(StatusEmbed).then(msg => {
+        setInterval(() => {
+            msg.edit(StatusEmbed)
+        }, 120000);
+    })
+
 
     function YousamPower() {
       let hungry = [`${client.guilds.cache.size} Servers | ^help` , `${count} Members | ^invite`]
