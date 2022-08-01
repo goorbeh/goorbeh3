@@ -31,7 +31,7 @@ module.exports = {
         let amount = interaction.options.getNumber("money")
 
         
-        if(user.bank < amount) {
+        if(user.money < amount) {
             return interaction.reply({content: "<:emoji_85:998533562481508472> شما اینقدر پول ندارید", ephemeral: true})
         }
 
