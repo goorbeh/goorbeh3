@@ -87,7 +87,6 @@ module.exports = {
                     ])
       )
 
-      interaction.reply({embeds: [embed], components: [Select, logoRow, invite],
-                        ephemeral: true})
+      interaction.reply({embeds: [embed], components: [Select, logoRow, invite]})
     }
   }
