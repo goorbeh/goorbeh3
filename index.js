@@ -26,7 +26,7 @@ client.on('guildCreate', guild => {
 })
 
 client.on('guildCreate', guild => {
-  const logChannel = client.cb;ghannels.cache.get("943784949532745748")
+  const logChannel = client.channels.cache.get("943784949532745748")
   let logEmbed = new Discord.MessageEmbed()
   .setTitle("New Server Is Added")
   .addField("<:verify:945185150579392522> **name**", `**__${guild.name}__**`, true)
