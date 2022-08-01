@@ -86,9 +86,9 @@ const StatusEmbed = new MessageEmbed()
 .addField("servers", `${client.guilds.cache.size}`)
 .addField("members", `${count}`)
 .setFooter("updated every 2Mins | GOORBEH bot")
- client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send(StatusEmbed).then(msg => {
+ client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
         setInterval(() => {
-            msg.edit(StatusEmbed)
+            msg.edit({embeds: [StatusEmbed]})
         }, 120000);
     })
 
