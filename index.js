@@ -84,7 +84,7 @@ const StatusEmbed = new MessageEmbed()
 .setColor("BLUE")
 .addField("Ping", `${client.ws.ping}`)
 .addField("servers", `${client.guilds.cache.size}`)
-.addField("members", `${count}`)
+.addField("members", `${client.users.cach.size}`)
 .setFooter("updated every 2Mins | GOORBEH bot")
  client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
         setInterval(() => {
