@@ -90,7 +90,7 @@ let StatusEmbed = new MessageEmbed()
  client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
         setInterval(() => {
 
-let StatusEmbed = new MessageEmbed()
+let StatusEmbd = new MessageEmbed()
 .setTitle("GOORBEH status")
 .setColor("BLUE")
 .addField("Ping", `${client.ws.ping}`)
@@ -99,7 +99,7 @@ let StatusEmbed = new MessageEmbed()
 .setFooter("updated every 2Mins | GOORBEH bot")
 
 msg.channel.bulkDelete(1, true)
-            msg.channel.send({embeds: [StatusEmbed]})
+            msg.channel.send({embeds: [StatusEmbd]})
         }, 120000);
     })
 
