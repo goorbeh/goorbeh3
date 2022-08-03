@@ -79,6 +79,10 @@ count += guild.memberCount
 })
   console.log(`logged as ${client.user.tag}`)
 
+
+ client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
+        setInterval(() => {
+
 const StatusEmbed = new MessageEmbed()
 .setTitle("GOORBEH status")
 .setColor("BLUE")
@@ -86,8 +90,6 @@ const StatusEmbed = new MessageEmbed()
 .addField("servers", `${client.guilds.cache.size}`)
 .addField("members", `${count}`)
 .setFooter("updated every 2Mins | GOORBEH bot")
- client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
-        setInterval(() => {
 
 msg.channel.bulkDelete(1, true)
             msg.channel.send({embeds: [StatusEmbed]})
