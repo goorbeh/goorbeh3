@@ -88,7 +88,9 @@ const StatusEmbed = new MessageEmbed()
 .setFooter("updated every 2Mins | GOORBEH bot")
  client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
         setInterval(() => {
-            msg.edit({embeds: [StatusEmbed]})
+
+msg.channel.bulkDelete(1, true)
+            msg.channel.send({embeds: [StatusEmbed]})
         }, 120000);
     })
 
