@@ -94,7 +94,7 @@ const StatusEmbed = new MessageEmbed()
 
 
     function YousamPower() {
-      let hungry = [`${client.guilds.cache.size} Servers | ^help` , `${count} Members | ^invite`]
+      let hungry = [`${client.guilds.cache.size} Servers | /help` , `${count} Members | /invite`, "V2 || USING Slash"]
       let Power = Math.floor(Math.random() * hungry.length);
       client.user.setActivity(hungry[Power], {type: "PLAYING"});
     }; setInterval(YousamPower, 10000)
