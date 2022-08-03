@@ -92,7 +92,7 @@ let StatusEmbed = new MessageEmbed()
 
 let cout = 0;
 client.guilds.cache.forEach((guild) => {
-count += guild.memberCount
+cout += guild.memberCount
 })
 
 let StatusEmbd = new MessageEmbed()
