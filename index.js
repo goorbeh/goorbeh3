@@ -90,12 +90,17 @@ let StatusEmbed = new MessageEmbed()
  client.guilds.cache.get('839525552476913704').channels.cache.get('1003660134729400340').send({embeds: [StatusEmbed]}).then(msg => {
         setInterval(() => {
 
+let cout = 0;
+client.guilds.cache.forEach((guild) => {
+count += guild.memberCount
+})
+
 let StatusEmbd = new MessageEmbed()
 .setTitle("GOORBEH status")
 .setColor("BLUE")
 .addField("Ping", `${client.ws.ping}`)
 .addField("servers", `${client.guilds.cache.size}`)
-.addField("members", `${count}`)
+.addField("members", `${cout}`)
 .setFooter("updated every 2Mins | GOORBEH bot")
 
 msg.channel.bulkDelete(1, true)
