@@ -28,7 +28,10 @@ const tedad = interaction.options.getNumber("amount")
        
       }
       
-       channel.bulkDelete(tedad, true)
+       channel.bulkDelete(tedad, true).catch(err => {
+interaction.reply({content: "پرم ندارم :)", ephemeral: true})
+return
+})
       
      interaction.reply({content: `** ${tedad} تا مسیج پاک شد **`, ephemeral: true})
     }
