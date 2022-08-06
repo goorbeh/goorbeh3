@@ -13,7 +13,6 @@ description: "admins commands",
     .addField("پاک کردن پیام ها", "clear", true)
     .addField("قفل کردن چنل", "lock", true)
     .addField("باز کردن چنل", "unlock", true)
-    .addField("ست کردن پریفیکس", "prefix", true)
     .setFooter("GOORBEH bot")
    interaction.reply({embeds: [embed],
                      ephemeral: true})
