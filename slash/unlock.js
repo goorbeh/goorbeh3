@@ -13,7 +13,7 @@ module.exports = {
         if (!interaction.member.permissions.has('MANAGE_CHANNELS')) {
             return interaction.reply({content: "Shoma Permission Nadarid 💩", ephemeral: true})
             }
-            channel.permissionOverwrites.edit(channel.guild.roles.everyone, { SEND_MESSAGES: true }).catch((e) => { console.error(e) })
+            channel.permissionOverwrites.edit(channel.guild.roles.everyone, { SEND_MESSAGES: true }).catch(err => { interaction.reply({content: "پرم ندارم :)", ephemeral: true}) })
             const embed = new Discord.MessageEmbed()
             .setTitle("Channel Update Shod")
             .setDescription(`🔓 ${channel}  Unlock Shod`)
