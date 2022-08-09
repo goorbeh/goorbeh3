@@ -206,6 +206,7 @@ const button = interaction.customId
         .setDescription(`شما در سرور ${interaction.guild.name} وریفای شدید`)
         .setColor("GREEN")
   interaction.member.send({embeds: [embed3]}).catch(err => {
+consol.log("h")
               return;
             })
             interaction.member.roles.add(role).catch(err => {
