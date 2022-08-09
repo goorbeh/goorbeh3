@@ -205,12 +205,16 @@ const button = interaction.customId
         .setTitle("وریفای شدید")
         .setDescription(`شما در سرور ${interaction.guild.name} وریفای شدید`)
         .setColor("GREEN")
+
   interaction.member.send({embeds: [embed3]}).catch(err => {
-consol.log("h")
-              return;
-            })
+return;
+})
             interaction.member.roles.add(role).catch(err => {
-              interaction.member.send("بات برای رول دادن پرم ندارد لطفا به اونر اطلاع دهید")
+
+
+              interaction.member.send("بات برای رول دادن پرم ندارد لطفا به اونر اطلاع دهید").catch(err => {
+return;
+})
               return;
             })
             
