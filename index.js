@@ -194,7 +194,9 @@ msg.channel.bulkDelete(1, true)
 
       const data = await captchaSchema.findOne({
             Guild: interaction.guild.id,
-        })
+        }).catch(err => {
+return;
+})
 
 const button = interaction.customId
           if(button === "yes") {
