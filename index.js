@@ -209,7 +209,14 @@ const button = interaction.customId
   interaction.member.send({embeds: [embed3]}).catch(err => {
 return;
 })
-            interaction.member.roles.add(role)
+            interaction.member.roles.add(role).catch(err => {
+
+
+              interaction.member.send("بات برای رول دادن پرم ندارد لطفا به اونر اطلاع دهید").catch(err => {
+return;
+})
+              return;
+            })
             
 
             
